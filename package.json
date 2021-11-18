@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-mongodb-mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node inex.js",
+    "devstart": "nodemon inex.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.0.13"
+  }
+}
