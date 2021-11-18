@@ -55,10 +55,26 @@ const createDocument = async () => {
 // we can all of mongo command with mongoose 
 const getDocument = async  () => {
     try{
-        const playlist = await Playlist.find({ctype:"front end"}, {name:1}).limit(1)
+        // const playlist = await Playlist.find({videos:10}, {name:1}).limit(1)
+        const playlist = await Playlist
+        .find({videos:10})
+        .select({name:1})
+        .limit(1)
         console.log(playlist)
     }catch{
         err => console.log(err)
     }
 }
-getDocument()
+// getDocument()
+
+// Comparision Operator 
+const getDocumentCompare = async  () => {
+    try{
+        // const playlist = await Playlist.find({videos: {$gt : 10}}, {name:1}) // find greater than 10 videos 
+        const playlist = await Playlist.find({ctype: {$in : ["front end", "backend"]}}, {name:1}) // find multiple match in same field 
+        console.log(playlist)
+    }catch{
+        err => console.log(err)
+    }
+}
+getDocumentCompare()

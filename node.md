@@ -2,3 +2,6 @@
  const result =await  reactPlaylist.save()
  - Insert Many
  const result =await  Playlist.insertMany([reactPlaylist,jsPlaylist, laravelPlaylist ])
+
+ Comparison Query Operators 
+ 
